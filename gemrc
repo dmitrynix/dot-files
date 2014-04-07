@@ -1,0 +1,5 @@
+---
+gem: --no-ri --no-rdoc
+:benchmark: false
+:verbose: false
+:ssl_verify_mode: 0
