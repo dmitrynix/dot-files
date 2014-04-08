@@ -5,11 +5,11 @@ set -e
 script_path=$(readlink -f "$0")
 directory_path=$(dirname "${script_path}")
 
-function sync_dotfile() {
-  echo " + ~/.${1}"
+for file in ${directory_path}/dot/*
+do
+  file_basename=$(basename $file)
 
-  rm -fr ${HOME}/.${1} && ln -s ${directory_path}/${1} ${HOME}/.${1}
-}
+  echo " + ~/.${file_basename}"
 
-sync_dotfile tmux.conf
-sync_dotfile gemrc
+  rm -fr ${HOME}/.${file_basename} && ln -s ${file} ${HOME}/.${file_basename}
+done
