@@ -1,0 +1,44 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+[[ -d "$HOME/Dropbox/Binary" ]] && export PATH="$PATH:$HOME/Dropbox/Binary"
+[[ -d "$HOME/Local/Binary" ]] && export PATH="$PATH:$HOME/Local/Binary"
+[[ -f "$HOME/Local/source" ]] && source "$HOME/Local/source"
+
+export EDITOR=$(which vim)
+export VISUAL=$(which vim)
+export PAGE=$(which less)
+
+alias q='exit'
+alias quit='exit'
+
+alias -g CF=' | cut -d: -f1 | uniq | sort'
+alias -g L=' | less'
+
+alias t='tmuxinator'
+
+unsetopt correct
+
+## THEME
+export ZSH_THEME_GIT_PROMPT_DIRTY="%F{red}⚡%f"
+export ZSH_THEME_GIT_AHEAD="↑"
+export ZSH_THEME_GIT_DIVERGED="↕"
+export ZSH_THEME_BEHIND="↓"
+
+zstyle ':vcs_info:*' stagedstr ${ZSH_THEME_GIT_PROMPT_DIRTY}
+zstyle ':vcs_info:*' unstagedstr ${ZSH_THEME_GIT_PROMPT_DIRTY}
+zstyle ':vcs_info:*' formats '[%b%c%u]'
+zstyle ':vcs_info:git*+set-message:*' hooks
+
+PROMPT=$'%B%M%b %1d${vcs_info_msg_0_}%# '
+RPROMPT=''
