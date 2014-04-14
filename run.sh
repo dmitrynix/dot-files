@@ -10,18 +10,10 @@ if [ ! -x "$(which git)" ]; then
   exit 1
 fi
 
-prezto_path="${HOME}/.zprezto"
-echo " + ${prezto_path}"
-if [ -d "${prezto_path}" ]; then
-  cd ${prezto_path}
-  git pull --rebase origin master
-  git submodule update --init --recursive
-else
-  git clone --recursive \
-    https://github.com/sorin-ionescu/prezto.git ${prezto_path}
-  rm -fr ~/.zprofile
-  ln -s ${HOME}/.zprezto/runcoms/zprofile ~/.zprofile
-fi
+for script in ${directory_path}/scripts/*
+do
+  source $script
+done
 
 for file in ${directory_path}/dot/*
 do
