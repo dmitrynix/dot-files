@@ -80,3 +80,5 @@ map <leader>/ :set hlsearch!<cr> " Toggle hlsearch :)
 " pay attention when the line has more then 80 characters. Tip by
 " @MarceloCajueiro
 match Error /\%80v.\+/
+
+set textwidth=80 " Use gq when in visual mode
