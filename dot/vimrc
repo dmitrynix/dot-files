@@ -13,6 +13,8 @@ Bundle 'gmarik/snipmate.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jnwhiteh/vim-golang'
+Bundle 'mattn/gist-vim'
+Bundle 'mattn/webapi-vim'
 
 au BufNewFile,BufRead *.go set filetype=go
 au BufNewFile,BufRead *.go set noexpandtab
