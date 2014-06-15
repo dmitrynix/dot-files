@@ -27,7 +27,7 @@ alias :e='vim'
 alias -g CF=' | cut -d: -f1 | uniq | sort'
 alias -g L=' | less'
 
-alias t='tmuxinator'
+alias mux='tmuxinator'
 
 unsetopt correct
 
