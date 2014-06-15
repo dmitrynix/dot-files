@@ -19,8 +19,10 @@ export EDITOR=$(which vim)
 export VISUAL=$(which vim)
 export PAGE=$(which less)
 
+# Vim link aliases
 alias q='exit'
 alias quit='exit'
+alias :e='vim'
 
 alias -g CF=' | cut -d: -f1 | uniq | sort'
 alias -g L=' | less'
