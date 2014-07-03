@@ -1,0 +1,17 @@
+[Unit]
+Description=Advanced key-value store
+After=network.target
+
+[Service]
+Type=forking
+
+PIDFile=/tmp/redis.pid
+
+EnvironmentFile=%h/Local/conf
+ExecStart=/bin/sh -c "${REDIS_ROOT}/bin/redis-server %h/Local/redis.conf"
+ExecStop= /bin/sh -c "${REDIS_ROOT}/bin/redis-cli shutdown"
+
+Restart=always
+
+[Install]
+WantedBy=default.target

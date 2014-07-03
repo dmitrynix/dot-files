@@ -23,3 +23,7 @@ do
 
   rm -fr ${HOME}/.${file_basename} && ln -s ${file} ${HOME}/.${file_basename}
 done
+
+rm -fr ~/.config/systemd/user
+mkdir -p ~/.config/systemd
+ln -s ${directory_path}/config-systemd-user ~/.config/systemd/user
