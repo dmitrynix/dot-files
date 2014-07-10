@@ -1,0 +1,14 @@
+[Unit]
+Description=CopyConsole
+After=local-fs.target network.target
+
+[Service]
+Type=simple
+EnvironmentFile=%h/Local/conf
+ExecStart=/bin/sh -c ${COPY_CONSOLE}
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=always
+
+[Install]
+WantedBy=default.target
