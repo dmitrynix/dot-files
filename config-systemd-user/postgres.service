@@ -11,9 +11,9 @@ EnvironmentFile=%h/Local/conf
 SyslogIdentifier=postgres
 PIDFile=%h/Local/Data/postgres/data/postmaster.pid
 
-ExecStart= /bin/sh -c "${POSTGRES_ROOT}/bin/pg_ctl -s -D ${PGROOT}/data start -w -t 120"
-ExecReload=/bin/sh -c "${POSTGRES_ROOT}/bin/pg_ctl -s -D ${PGROOT}/data reload"
-ExecStop=  /bin/sh -c "${POSTGRES_ROOT}/bin/pg_ctl -s -D ${PGROOT}/data stop -m fast"
+ExecStart= /bin/sh -c "${POSTGRES_ROOT}/bin/pg_ctl -s -D ${POSTGRES_DATA}/data start -w -t 120"
+ExecReload=/bin/sh -c "${POSTGRES_ROOT}/bin/pg_ctl -s -D ${POSTGRES_DATA}/data reload"
+ExecStop=  /bin/sh -c "${POSTGRES_ROOT}/bin/pg_ctl -s -D ${POSTGRES_DATA}/data stop -m fast"
 
 # Due to PostgreSQL's use of shared memory, OOM killer is often overzealous in
 # killing Postgres, so adjust it downward
