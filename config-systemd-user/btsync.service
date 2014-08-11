@@ -1,0 +1,10 @@
+[Unit]
+Description=Bittorent Sync service
+After=network.target
+
+[Service]
+ExecStart=/bin/sh -c "%h/Dropbox/Binary/btsync --config /home/dmitry/.btsync/config --nodaemon"
+Restart=on-abort
+
+[Install]
+WantedBy=default.target
