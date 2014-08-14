@@ -1,0 +1,4 @@
+gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
+setxkbmap -layout us -variant mac -option altwin:swap_lalt
+xsetroot -cursor_name left_ptr
+feh --bg-fill ~/Downloads/282535.jpg
