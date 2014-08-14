@@ -6,5 +6,3 @@ alias -g CF=' | cut -d: -f1 | uniq | sort'
 alias -g L=' | less'
 
 alias mux='tmuxinator'
-
-alias openx='xdg-open'

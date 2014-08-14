@@ -28,27 +28,3 @@ zstyle ':vcs_info:git*+set-message:*' hooks
 
 PROMPT=$'%B%M%b %1d${vcs_info_msg_0_}%# '
 RPROMPT=''
-
-## tmux
-#
-# *Based on prezto tmux/init.zsh*
-if [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]]
-then
-  exec startx
-else
-  if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" ]]
-  then
-    tmux start-server
-
-    # Create a 'default' session if no session has been defined in tmux.conf.
-    if ! tmux has-session 2> /dev/null; then
-      tmux_session='default'
-      tmux \
-        new-session -d -s "$tmux_session" \; \
-        set-option -t "$tmux_session" destroy-unattached off &> /dev/null
-    fi
-
-    # Attach to the 'default' session or to the last session used.
-    exec tmux attach-session -t default
-  fi
-fi

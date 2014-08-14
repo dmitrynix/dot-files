@@ -23,21 +23,29 @@ zstyle ':prezto:*:*' color 'no'
 
 # Set the Prezto modules to load (browse modules).
 # The order matters.
+#
+# Note:
+#
+# * completion: This module must be loaded **after** the *utility* module.
+# * environment: This module must be loaded first.
+# * history-substring-search: If this module is used in conjuncture with the
+#   *syntax-highlighting* module, it must be loaded **after** it.
+#
 zstyle ':prezto:load' pmodule \
   'environment' \
-  'terminal' \
+  'directory' \
   'editor' \
   'history' \
-  'directory' \
-  'spectrum' \
-  'utility' \
-  'completion' \
-  'prompt' \
   'syntax-highlighting' \
-  'history-substring-search'
+  'history-substring-search' \
+  'prompt' \
+  'tmux' \
+  'utility' \
+  'completion'
 
 zstyle ':prezto:module:utility:ls' color 'no'
 zstyle ':prezto:module:utility:diff' color 'no'
+zstyle ':prezto:module:utility:make' color 'no'
 #
 # Editor
 #
@@ -97,7 +105,7 @@ zstyle ':prezto:module:prompt' theme 'minimal'
 #
 
 # Auto switch the Ruby version on directory change.
-zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
+# zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
 
 #
 # Screen
@@ -153,7 +161,7 @@ zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
 #
 
 # Auto start a session when Zsh is launched in a local terminal.
-# zstyle ':prezto:module:tmux:auto-start' local 'yes'
+zstyle ':prezto:module:tmux:auto-start' local 'yes'
 
 # Auto start a session when Zsh is launched in a SSH connection.
-# zstyle ':prezto:module:tmux:auto-start' remote 'yes'
+zstyle ':prezto:module:tmux:auto-start' remote 'no'
