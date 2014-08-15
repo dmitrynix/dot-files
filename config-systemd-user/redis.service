@@ -7,9 +7,8 @@ Type=forking
 
 PIDFile=/tmp/redis.pid
 
-EnvironmentFile=%h/Local/conf
-ExecStart=/bin/sh -c "${REDIS_ROOT}/bin/redis-server %h/Local/redis.conf"
-ExecStop= /bin/sh -c "${REDIS_ROOT}/bin/redis-cli shutdown"
+ExecStart=/bin/sh -c "%h/local/bin/redis-server %h/local/etc/redis.conf"
+ExecStop= /bin/sh -c "%h/local/bin/redis-cli shutdown"
 
 Restart=always
 
