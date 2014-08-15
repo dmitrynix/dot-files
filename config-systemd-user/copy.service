@@ -4,8 +4,7 @@ After=local-fs.target network.target
 
 [Service]
 Type=simple
-EnvironmentFile=%h/Local/conf
-ExecStart=/bin/sh -c ${COPY_CONSOLE}
+ExecStart=/bin/sh -c "%h/local/copy/x86_64/CopyConsole -root=%h/Copy"
 ExecReload=/bin/kill -HUP $MAINPID
 KillMode=process
 Restart=always
