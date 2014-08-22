@@ -7,6 +7,4 @@ if [ -d "${prezto_path}" ]; then
 else
   git clone --recursive \
     https://github.com/sorin-ionescu/prezto.git ${prezto_path}
-  rm -fr ~/.zprofile
-  ln -s ${HOME}/.zprezto/runcoms/zprofile ~/.zprofile
 fi
