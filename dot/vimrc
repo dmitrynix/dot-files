@@ -82,3 +82,5 @@ map <leader>/ :set hlsearch!<cr> " Toggle hlsearch :)
 match Error /\%80v.\+/
 
 set textwidth=80 " Use gq when in visual mode
+
+syntax on
