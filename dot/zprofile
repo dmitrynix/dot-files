@@ -43,9 +43,8 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  ~/local/{bin,sbin}
+  ~/local/{bin,sbin,Binary}
   /usr/local/{bin,sbin}
-  ~/Local/Binary
   ~/Dropbox/Binary
   $path
 )
