@@ -1,0 +1,13 @@
+pkgname="clojure"
+pkgversion="1.6.0"
+pkgfile="${pkgname}-${pkgversion}.zip"
+pkguri="http://central.maven.org/maven2/org/clojure/clojure/${pkgversion}/${pkgfile}"
+pkgmd5="c102956589a49ebc9e3d488b6aeb29cd"
+
+extract_source() {
+  unzip $(pkgdownload_path) -d ${BREW_PREFIX}
+}
+
+install_package() {
+  echo
+}
