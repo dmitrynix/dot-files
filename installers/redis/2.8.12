@@ -1,0 +1,11 @@
+pkgname="redis"
+pkgversion="2.8.12"
+pkgfile="${pkgname}-${pkgversion}.tar.gz"
+pkguri="http://download.redis.io/releases/${pkgfile}"
+pkgmd5="27645ca17ac1c269e67862fcc0f1d2e3"
+
+install_package() {
+  cd ${pkgbuild_path}
+  make
+  make PREFIX=${BREW_PREFIX} install
+}

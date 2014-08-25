@@ -1,0 +1,10 @@
+pkgname="chruby"
+pkgversion="0.3.8"
+pkgfile="${pkgname}-${pkgversion}.tar.gz"
+pkguri="https://github.com/postmodern/${pkgname}/archive/v${pkgversion}.tar.gz"
+pkgmd5="c7ca0f82dc7707a0ba6559a485fae801"
+
+install_package() {
+  cd ${pkgbuild_path}
+  make PREFIX=${BREW_PREFIX} install
+}
