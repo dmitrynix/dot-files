@@ -1,0 +1,13 @@
+[Unit]
+Description=PS3 Media Server
+After=syslog.target network.target rpcbind.service
+
+[Service]
+Type=simple
+
+Environment=JAVA_HOME=%h/local/jre1.7.0_65
+
+ExecStart=/home/dmitry/local/pms-1.90.1/PMS.sh
+
+[Install]
+WantedBy=default.target
