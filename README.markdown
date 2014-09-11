@@ -10,3 +10,9 @@ Add to shell:
 
     export CFLAGS="-I${HOME}/local/include"
     export LDFLAGS="-L${HOME}/local/lib"
+
+From: [http://blog.sanctum.geek.nz/compiling-in-home/](http://blog.sanctum.geek.nz/compiling-in-home/)
+
+# Start PostgreSQL
+
+    % initdb -D ~/local/var/lib/postgres/data
