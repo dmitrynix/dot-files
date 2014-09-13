@@ -16,11 +16,7 @@ fi
 unsetopt correct
 
 ## THEME
-export ZSH_THEME_GIT_PROMPT_DIRTY="%F{red}⚡%f"
-export ZSH_THEME_GIT_AHEAD="↑"
-export ZSH_THEME_GIT_DIVERGED="↕"
-export ZSH_THEME_BEHIND="↓"
-
+export ZSH_THEME_GIT_PROMPT_DIRTY="%F{red}*%f"
 zstyle ':vcs_info:*' stagedstr ${ZSH_THEME_GIT_PROMPT_DIRTY}
 zstyle ':vcs_info:*' unstagedstr ${ZSH_THEME_GIT_PROMPT_DIRTY}
 zstyle ':vcs_info:*' formats '[%b%c%u]'
