@@ -18,7 +18,7 @@ esac
 
 xsetroot -cursor_name left_ptr
 
-feh --bg-fill ~/Dropbox/282535.jpg
+feh --bg-fill ~/Downloads/282535.jpg
 
 if [[ ! -d "$TMPDIR" ]]; then
   export TMPDIR="/tmp/$USER"
