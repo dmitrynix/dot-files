@@ -1,7 +1,21 @@
 gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
-setxkbmap -layout us -variant mac -option altwin:swap_lalt
+case $(hostname) in
+desktop1)
+  setxkbmap -layout us -variant mac -option altwin:swap_lalt
+  ;;
+ultrathin0)
+  setxkbmap -layout us -variant mac -option altwin:swap_alt_win
+
+  while true; do
+    xsetroot -name "$(acpi -b)"
+    sleep 1m
+  done &
+  ;;
+esac
+
 xsetroot -cursor_name left_ptr
-feh --bg-fill ~/Downloads/282535.jpg
+
+feh --bg-fill ~/Dropbox/282535.jpg
 
 if [[ ! -d "$TMPDIR" ]]; then
   export TMPDIR="/tmp/$USER"
