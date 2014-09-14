@@ -16,3 +16,20 @@ From: [http://blog.sanctum.geek.nz/compiling-in-home/](http://blog.sanctum.geek.
 # Start PostgreSQL
 
     % initdb -D ~/local/var/lib/postgres/data
+
+# DWM
+
+## Compile and install
+
+    % make && make PREFIX=~/local install
+
+## desktop file
+
+    % cat /usr/share/xsessions/dwm.desktop
+    [Desktop Entry]
+    Encoding=UTF-8
+    Name=Dwm
+    Comment=Dynamic window manager
+    Exec=/home/dmitry/local/bin/dwm
+    Icon=dwm
+    Type=XSession
