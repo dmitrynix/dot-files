@@ -5,6 +5,9 @@ desktop1)
   ;;
 ultrathin0)
   setxkbmap -layout us -variant mac -option altwin:swap_alt_win
+  # From:
+  # http://askubuntu.com/questions/73502/how-to-map-the-menu-key-as-altgr-key
+  xmodmap -e "keysym Menu = ISO_Level3_Shift"
 
   while true; do
     xsetroot -name "$(acpi -b)"
