@@ -33,3 +33,9 @@ From: [http://blog.sanctum.geek.nz/compiling-in-home/](http://blog.sanctum.geek.
     Exec=/home/dmitry/local/bin/dwm
     Icon=dwm
     Type=XSession
+
+# St terminal
+
+Compile and install with:
+
+    % make && make PREFIX=~/local install
