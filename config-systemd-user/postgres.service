@@ -9,7 +9,7 @@ TimeoutSec=120
 Environment=PGROOT=%h/local/var/lib/postgres
 
 SyslogIdentifier=postgres
-PIDFile=${PGROOT}/data/postmaster.pid
+PIDFile=%h/local/var/lib/postgres/data/postmaster.pid
 
 ExecStart= /bin/sh -c "%h/local/bin/pg_ctl -s -D ${PGROOT}/data start -w -t 120"
 ExecReload=/bin/sh -c "%h/local/bin/pg_ctl -s -D ${PGROOT}/data reload"
