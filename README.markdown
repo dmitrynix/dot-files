@@ -39,3 +39,7 @@ From: [http://blog.sanctum.geek.nz/compiling-in-home/](http://blog.sanctum.geek.
 Compile and install with:
 
     % make && make PREFIX=~/local install
+
+# Default gems
+
+    gem install bundler foreman mailcatcher tmuxinator
