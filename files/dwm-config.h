@@ -68,6 +68,8 @@ static const char *screenshot[]  = { "gnome-screenshot",  "--interactive", NULL 
 /* Volumes: */
 static const char *volumedown[] = { "vol", "down", NULL };
 static const char *volumeup[]   = { "vol", "up", NULL };
+static const char *blightup[]   = { "xbacklight", "-inc", "10" };
+static const char *blightdown[] = { "xbacklight", "-dec", "10" };
 static const char *mute[]       = { "amixer", "-q", "set", "Master", "toggle", NULL };
 static const char *play[]       = { "cmus-remote", "-p", NULL };
 static const char *stop[]       = { "cmus-remote", "-u", NULL };
@@ -91,6 +93,9 @@ static Key keys[] = {
 	{ 0, XF86XK_AudioPrev,          spawn,        { .v = prev } },
 	{ 0, XF86XK_AudioRaiseVolume,   spawn,        { .v = volumeup } },
 	{ 0, XF86XK_AudioStop,          spawn,        { .v = stop } },
+
+	{ 0, XF86XK_MonBrightnessDown,  spawn,        { .v = blightdown } },
+	{ 0, XF86XK_MonBrightnessUp,    spawn,        { .v = blightup } },
 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
