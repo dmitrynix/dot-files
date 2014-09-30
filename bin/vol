@@ -1,11 +1,11 @@
 #!/bin/bash
 
-set -ex
+set -e
 
-if [ ${1} == "up" ]
+if [ "${1}" == "up" ]
 then
   amixer -q set Master 2%+ unmute
-elif [ ${1} == "down" ]
+elif [ "${1}" == "down" ]
 then
   amixer -q set Master 2%- unmute
 fi
