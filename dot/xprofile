@@ -1,4 +1,5 @@
 gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
+
 case $(hostname) in
 desktop1)
   setxkbmap -layout us -variant mac -option altwin:swap_lalt
@@ -10,7 +11,9 @@ ultra0)
   xmodmap -e "keysym Menu = ISO_Level3_Shift"
 
   while true; do
-    xsetroot -name "$(acpi -b)"
+    VOL=$(amixer get Master | tail -1 | sed 's/.*\[\([0-9]*%\)\].*/\1/')
+    xsetroot -name "$(acpi -b) [${VOL}]"
+
     sleep 1m
   done &
   ;;

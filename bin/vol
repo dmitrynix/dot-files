@@ -11,4 +11,4 @@ then
 fi
 
 VOL=$(amixer get Master | tail -1 | sed 's/.*\[\([0-9]*%\)\].*/\1/')
-xsetroot -name $VOL
+xsetroot -name "$(acpi -b) [${VOL}]"
