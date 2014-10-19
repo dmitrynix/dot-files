@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -ex
+
+stop cups-browsed || true
+stop cups || true
+
+sleep 5
+
+find /var/spool/cups -type f -exec rm '{}' \;
+
+sleep 5
+
+start cups
+start cups-browsed
