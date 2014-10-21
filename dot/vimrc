@@ -10,6 +10,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-fireplace'
 Bundle 'gmarik/snipmate.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'altercation/vim-colors-solarized'
