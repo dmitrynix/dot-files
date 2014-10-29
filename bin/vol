@@ -11,4 +11,6 @@ then
 fi
 
 VOL=$(amixer get Master | tail -1 | sed 's/.*\[\([0-9]*%\)\].*/\1/')
-xsetroot -name "$(acpi -b) [${VOL}]"
+ACPI=$([ $(which acpi 2>/dev/null) ] && acpi -b || true)
+
+xsetroot -name "${ACPI}[${VOL}]"
