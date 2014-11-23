@@ -59,6 +59,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *termcmdalt[]  = { "st", "-e", "bash", NULL };
 
 static const char *calccmd[]  = { "dmenu_calc", NULL };
 static const char *chrome[]  = { "google-chrome-stable", NULL };
@@ -80,6 +81,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_Delete, spawn,          {.v = termcmdalt } },
 
 	{ MODKEY,                       XK_a,      spawn,          {.v = nautilus } },
 	{ MODKEY,                       XK_c,      spawn,          {.v = calccmd } },
