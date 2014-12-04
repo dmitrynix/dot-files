@@ -7,6 +7,6 @@ export RAILS_ENV=test
 rm -fr db/schema.rb
 rm -fr db/structure.sql
 
-rake db:drop
-rake db:create
-rake db:migrate
+bundle exec rake db:drop
+bundle exec rake db:create
+bundle exec rake db:migrate
