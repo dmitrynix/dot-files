@@ -1,0 +1,16 @@
+pkgname="postgresql"
+pkgversion="9.4.0"
+pkgfile="${pkgname}-${pkgversion}.tar.bz2"
+pkguri="http://ftp.postgresql.org/pub/source/v${pkgversion}/${pkgfile}"
+pkgmd5="8cd6e33e1f8d4d2362c8c08bd0e8802b"
+
+extract_source() {
+  tar xfj "$(pkgdownload_path)" -C /tmp
+}
+
+install_package() {
+  cd ${pkgbuild_path}
+  ./configure --prefix="${BREW_PREFIX}"
+  make world
+  make install-world
+}
