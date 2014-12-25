@@ -1,0 +1,15 @@
+pkgname="ruby"
+pkgversion="2.2.0"
+pkgfile="${pkgname}-${pkgversion}.tar.gz"
+pkguri="http://cache.ruby-lang.org/pub/ruby/2.2/${pkgfile}"
+pkgmd5="cd03b28fd0b555970f5c4fd481700852"
+
+install_package() {
+  cd ${pkgbuild_path}
+  ./configure \
+    --prefix="${BREW_PREFIX}/rubies/${pkgname}-${pkgversion}" \
+    --disable-install-doc \
+    --disable-install-rdoc
+  make
+  make install
+}
