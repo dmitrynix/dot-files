@@ -7,16 +7,16 @@ call vundle#rc()
 
 " My plugins to install/update with vundler
 " See http://vimawesome.com/
-Bundle 'gmarik/vundle'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'gmarik/snipmate.vim'
-Bundle 'jamessan/vim-gnupg'
-Bundle 'mattn/emmet-vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-fireplace'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-surround'
+Plugin 'gmarik/snipmate.vim'
+Plugin 'gmarik/vundle'
+Plugin 'jamessan/vim-gnupg'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-surround'
 
 au BufNewFile,BufRead *.go set filetype=go
 au BufNewFile,BufRead *.go set noexpandtab
