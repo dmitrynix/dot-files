@@ -43,3 +43,20 @@ Compile and install with:
 # Default gems
 
     gem install bundler foreman mailcatcher tmuxinator
+
+See `bin/install-default-gems.sh`.
+
+# Fix
+
+To fix this error:
+
+    _history-substring-search-end:13: _zsh_highlight: function definition file not found
+
+Use:
+
+    cd ~/.zprezto
+    git submodule init
+    git submodule update --init --recursive
+    git submodule foreach git pull origin master
+
+From: https://github.com/sorin-ionescu/prezto/issues/488
