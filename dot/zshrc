@@ -24,3 +24,7 @@ zstyle ':vcs_info:git*+set-message:*' hooks
 
 PROMPT=$'%B%M%b %1d${vcs_info_msg_0_}%# '
 RPROMPT=''
+
+# bind k and j for VI mode
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
