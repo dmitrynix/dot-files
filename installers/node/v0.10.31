@@ -1,9 +1,0 @@
-pkgname="node"
-pkgversion="v0.10.31"
-pkgfile="${pkgname}-${pkgversion}.tar.gz"
-pkguri="http://nodejs.org/dist/${pkgversion}/${pkgname}-${pkgversion}-linux-x64.tar.gz"
-pkgmd5="566ce38b1b0b46560ac8edd2f50ab087"
-
-install_package() {
-  mv /tmp/${pkgname}-${pkgversion}-linux-x64 ${BREW_PREFIX}
-}
