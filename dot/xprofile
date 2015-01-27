@@ -1,14 +1,10 @@
-gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
-
 case $(hostname) in
 desktop1)
   setxkbmap -layout us -variant mac -option altwin:swap_lalt
   ;;
 ultra0)
   setxkbmap -layout us -variant mac -option altwin:swap_alt_win
-  # From:
-  # http://askubuntu.com/questions/73502/how-to-map-the-menu-key-as-altgr-key
-  xmodmap -e "keysym Menu = ISO_Level3_Shift"
+  xmodmap ~/.remap
 
   while true; do
     VOL=$(amixer get Master | tail -1 | sed 's/.*\[\([0-9]*%\)\].*/\1/')
@@ -22,6 +18,12 @@ esac
 xsetroot -cursor_name left_ptr
 
 feh --bg-fill ~/Dropbox/Pictures/wallpapers/282535.jpg
+
+# Fix java apps
+# From:
+# https://wiki.archlinux.org/index.php/dwm#Fixing_misbehaving_Java_applications
+wmname LG3D
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 if [[ ! -d "$TMPDIR" ]]; then
   export TMPDIR="/tmp/$USER"
