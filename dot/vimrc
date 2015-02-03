@@ -10,8 +10,6 @@ call vundle#rc()
 Plugin 'gmarik/snipmate.vim'
 Plugin 'gmarik/vundle'
 Plugin 'jamessan/vim-gnupg'
-Plugin 'kien/ctrlp.vim'
-Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-markdown'
