@@ -62,9 +62,9 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *termcmdalt[]  = { "st", "-e", "bash", NULL };
 
 static const char *calccmd[]  = { "dmenu_calc", NULL };
-static const char *chrome[]  = { "google-chrome-stable", NULL };
-static const char *nautilus[]  = { "nautilus", "--no-desktop", NULL };
-static const char *screenshot[]  = { "gnome-screenshot",  "--interactive", NULL };
+static const char *browser[]  = { "google-chrome-stable", NULL };
+static const char *filemanager[]  = { "dolphin", NULL };
+static const char *screenshot[]  = { "ksnapshot", NULL };
 
 /* Volumes: */
 static const char *volumedown[] = { "vol", "down", NULL };
@@ -83,10 +83,10 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Delete, spawn,          {.v = termcmdalt } },
 
-	{ MODKEY,                       XK_a,      spawn,          {.v = nautilus } },
+	{ MODKEY,                       XK_a,      spawn,          {.v = filemanager } },
 	{ MODKEY,                       XK_c,      spawn,          {.v = calccmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = screenshot } },
-	{ MODKEY,                       XK_w,      spawn,          {.v = chrome } },
+	{ MODKEY,                       XK_w,      spawn,          {.v = browser } },
 
 	{ 0, XF86XK_AudioLowerVolume,   spawn,        { .v = volumedown } },
 	{ 0, XF86XK_AudioMute,          spawn,        { .v = mute } },
