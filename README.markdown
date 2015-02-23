@@ -48,6 +48,8 @@ See `bin/install-default-gems.sh`.
 
 # Fix
 
+## zsh history substring search
+
 To fix this error:
 
     _history-substring-search-end:13: _zsh_highlight: function definition file not found
@@ -60,3 +62,15 @@ Use:
     git submodule foreach git pull origin master
 
 From: https://github.com/sorin-ionescu/prezto/issues/488
+
+## PostgreSQL and Ruby On Rails
+
+    could not connect to server: No such file or directory
+            Is the server running locally and accepting
+            connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+
+Install with `pg_config` path:
+
+    gem install pg -- --with-pg-config=/home/dmitry/.linuxbrew/bin/pg_config
+
+From: http://stackoverflow.com/questions/8465508/can-not-connect-to-local-postgresql/24837298#24837298
