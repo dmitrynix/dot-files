@@ -17,7 +17,7 @@ esac
 
 xsetroot -cursor_name left_ptr
 
-feh --bg-fill ~/Dropbox/Pictures/wallpapers/282535.jpg
+feh --bg-scale ~/Downloads/GERMAN_Flag_deutschland_feuer_by_suicidecrew.jpg
 
 # Fix java apps
 # From:
