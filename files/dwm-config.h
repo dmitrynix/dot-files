@@ -57,14 +57,14 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+static const char *termcmd[]     = { "st", NULL };
 static const char *termcmdalt[]  = { "st", "-e", "bash", NULL };
 
-static const char *calccmd[]  = { "dmenu_calc", NULL };
-static const char *browser[]  = { "google-chrome-stable", NULL };
+static const char *calccmd[]      = { "dmenu_calc", NULL };
+static const char *browser[]      = { "google-chrome-stable", NULL };
 static const char *filemanager[]  = { "dolphin", NULL };
-static const char *screenshot[]  = { "ksnapshot", NULL };
+static const char *screenshot[]   = { "ksnapshot", NULL };
 
 /* Volumes: */
 static const char *volumedown[] = { "vol", "down", NULL };
@@ -84,7 +84,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Delete, spawn,          {.v = termcmdalt } },
 
 	{ MODKEY,                       XK_a,      spawn,          {.v = filemanager } },
-	{ MODKEY,                       XK_c,      spawn,          {.v = calccmd } },
+	{ MODKEY,                       XK_space,  spawn,          {.v = calccmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = screenshot } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = browser } },
 
@@ -108,7 +108,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
