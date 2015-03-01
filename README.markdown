@@ -40,7 +40,16 @@ Compile and install with:
 
     % make && make PREFIX=~/local install
 
-# Default gems
+# Ruby
+
+## Install
+
+    tar xfz ruby*tgz
+    cd ruby*
+    ./configure --prefix="${HOME}/.rubies/ruby-2.x.x" --disable-install-doc --disable-install-rdoc
+    make && make install
+
+## Default gems
 
     gem install bundler foreman mailcatcher tmuxinator
 
