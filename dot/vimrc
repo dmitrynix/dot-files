@@ -28,7 +28,6 @@ set number
 
 set wrap " Line wrapping on
 set ts=2 sts=2 sw=2 expandtab " Use spaces instead tabs. From: http://vimcasts.org/episodes/tabs-and-spaces/
-autocmd BufEnter *.py set ai sw=2 ts=2 sta et fo=croql
 
 " Disable defaults
 set mouse-=a " Disable mouse integration :|, from: http://www.varesano.net/blog/fabio/disable%20vim%20automatic%20visual%20mode%20using%20mouse
