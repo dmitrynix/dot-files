@@ -20,6 +20,10 @@ source ~/.linuxbrew/opt/chruby/share/chruby/chruby.sh
 source ~/.linuxbrew/opt/chruby/share/chruby/auto.sh
 chruby 2
 
+## Ruby
+alias rspec='bundle exec rspec --fail-fast --seed 1'
+alias rake='bundle exec rake'
+
 ## THEME
 export ZSH_THEME_GIT_PROMPT_DIRTY="%F{red}*%f"
 zstyle ':vcs_info:*' stagedstr ${ZSH_THEME_GIT_PROMPT_DIRTY}
