@@ -85,3 +85,6 @@ match Error /\%80v.\+/
 set textwidth=80 " Use gq when in visual mode
 
 syntax on
+
+"
+let g:syntastic_html_tidy_ignore_errors = [ "trimming empty <i>" ]
