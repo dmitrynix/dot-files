@@ -19,6 +19,11 @@ From: [http://blog.sanctum.geek.nz/compiling-in-home/](http://blog.sanctum.geek.
 
 # DWM
 
+Change between screens:
+
+* 'alt+shirt+,'
+* 'alt+shirt+.'
+
 ## Compile and install
 
     % make && make PREFIX=~/local install
