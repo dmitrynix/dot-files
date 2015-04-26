@@ -2,4 +2,4 @@
 
 set -xe
 
-gem install bundler foreman mailcatcher tmuxinator
+gem install bundler foreman mailcatcher tmuxinator tempo-cli
