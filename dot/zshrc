@@ -20,10 +20,6 @@ source ~/.linuxbrew/opt/chruby/share/chruby/chruby.sh
 source ~/.linuxbrew/opt/chruby/share/chruby/auto.sh
 chruby 2
 
-## Ruby
-alias rspec='bundle exec rspec --fail-fast --seed 1'
-alias rake='bundle exec rake'
-
 ## THEME
 export ZSH_THEME_GIT_PROMPT_DIRTY="%F{red}*%f"
 zstyle ':vcs_info:*' stagedstr ${ZSH_THEME_GIT_PROMPT_DIRTY}
@@ -37,6 +33,3 @@ RPROMPT=''
 # bind k and j for VI mode
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
-
-alias rm='echo "This is not the command you are looking for."; false'
-
