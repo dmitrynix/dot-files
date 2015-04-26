@@ -16,9 +16,11 @@ fi
 unsetopt correct
 
 ## chruby
-source ~/.linuxbrew/opt/chruby/share/chruby/chruby.sh
-source ~/.linuxbrew/opt/chruby/share/chruby/auto.sh
-chruby 2
+if [[ -d ~/.linuxbrew/opt/chruby ]]; then
+  source ~/.linuxbrew/opt/chruby/share/chruby/chruby.sh
+  source ~/.linuxbrew/opt/chruby/share/chruby/auto.sh
+  chruby 2
+fi
 
 # bind k and j for VI mode
 bindkey -M vicmd 'k' history-substring-search-up
