@@ -28,3 +28,20 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 PROMPT=$'%B%M%b %1d%# '
 RPROMPT=''
+
+# Aliases
+alias quit='exit'
+alias q='exit'
+alias :q='exit'
+alias :e='vim'
+
+alias -g CF=' | cut -d: -f1 | uniq | sort'
+alias -g L=' | less'
+
+alias mux='tmuxinator'
+
+alias rm='echo "This is not the command you are looking for."; false'
+
+alias rspec='bundle exec rspec --fail-fast --seed 1'
+alias rake='bundle exec rake'
+alias fpp='~/Clone/PathPicker/fpp'
