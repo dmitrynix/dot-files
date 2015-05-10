@@ -28,6 +28,7 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 PROMPT=$'%B%M%b %1d%# '
 RPROMPT=''
+export NODE_ENV='development'
 
 # Aliases
 alias quit='exit'

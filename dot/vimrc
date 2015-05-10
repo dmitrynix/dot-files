@@ -15,6 +15,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
+Plugin 'jelera/vim-javascript-syntax'
 
 au BufNewFile,BufRead *.go set filetype=go
 au BufNewFile,BufRead *.go set noexpandtab
