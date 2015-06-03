@@ -45,6 +45,7 @@ typeset -gU cdpath fpath mailpath path
 path=(
   ~/local/{bin,sbin}
   ~/.linuxbrew/bin
+  ~/.node_modules/bin
   /usr/local/{bin,sbin}
   $path
 )
