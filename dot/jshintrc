@@ -1,4 +1,9 @@
 {
+  "esnext": true,
   "laxbreak": true,
-  "laxcomma": true
+  "laxcomma": true,
+  "camelcase": true,
+  "indent": 2,
+  "maxlen": 80,
+  "quotmark": "single"
 }
