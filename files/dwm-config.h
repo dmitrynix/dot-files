@@ -64,7 +64,8 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]     = { "/usr/bin/konsole", NULL };
+static const char *termcmd[]     = { "st", NULL };
+static const char *slock[]     = { "slock", NULL };
 
 static const char *calccmd[]      = { "dmenu_calc", NULL };
 static const char *browser[]      = { "google-chrome-stable", NULL };
@@ -91,6 +92,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_space,  spawn,          {.v = calccmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = screenshot } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = browser } },
+
+	{ 0, XK_Pause,                 spawn,         { .v = slock } },
 
 	{ 0, XF86XK_AudioLowerVolume,   spawn,        { .v = volumedown } },
 	{ 0, XF86XK_AudioMute,          spawn,        { .v = mute } },
