@@ -34,6 +34,7 @@ export NODE_ENV='development'
 alias quit='exit'
 alias q='exit'
 alias :q='exit'
+alias :q!='exit'
 alias :e='vim'
 
 alias -g CF=' | cut -d: -f1 | uniq | sort'
