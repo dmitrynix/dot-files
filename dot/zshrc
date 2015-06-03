@@ -44,7 +44,5 @@ alias mux='tmuxinator'
 
 alias rm='echo "This is not the command you are looking for."; false'
 
-alias rspec='bundle exec rspec --fail-fast --seed 1'
+alias rspec='bundle exec rspec --no-color --fail-fast --seed 1'
 alias rake='bundle exec rake'
-alias fpp='~/Clone/PathPicker/fpp'
-alias sctl='systemctl'
