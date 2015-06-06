@@ -14,10 +14,10 @@ else
   git clone git://github.com/dmitrynix/snipmate-snippets.git ${snippets_path}
 fi
 
-echo " +  .vim/colors"
+echo " + .vim/colors"
 mkdir -p ${HOME}/.vim/colors
 cp ${directory_path}/files/github.vim ${HOME}/.vim/colors
 
-echo " +  vim bundle"
+echo " + vim bundle"
 vim +BundleInstall +qall
 vim +BundleUpdate +qall

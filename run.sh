@@ -12,6 +12,7 @@ fi
 
 for script in ${directory_path}/scripts/*
 do
+  echo " + $(basename $script)"
   source $script
 done
 

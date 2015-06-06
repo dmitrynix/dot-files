@@ -1,36 +1,23 @@
+unsetopt correct
 #
-# Executes commands at the start of an interactive session.
+# Load machine only configuration
 #
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+if [[ -f "$HOME/local/etc/profile" ]]; then
+  source "$HOME/local/etc/profile"
 fi
 
-# Customize to your needs...
-[[ -f "$HOME/local/etc/profile" ]] && source "$HOME/local/etc/profile"
-
-unsetopt correct
-
-## chruby
-if [[ -d ~/.linuxbrew/opt/chruby ]]; then
-  source ~/.linuxbrew/opt/chruby/share/chruby/chruby.sh
-  source ~/.linuxbrew/opt/chruby/share/chruby/auto.sh
+#
+# chruby
+#
+if [[ -d "/usr/local/share/chruby" ]]; then
+  source "/usr/local/share/chruby/chruby.sh"
+  source "/usr/local/share/chruby/auto.sh"
   chruby 2
 fi
 
-# bind k and j for VI mode
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
-
-PROMPT=$'%B%M%b %1d%# '
-RPROMPT=''
-export NODE_ENV='development'
-
+#
 # Aliases
+#
 alias quit='exit'
 alias q='exit'
 alias :q='exit'
@@ -46,3 +33,39 @@ alias rm='echo "This is not the command you are looking for."; false'
 
 alias rspec='bundle exec rspec --no-color --fail-fast --seed 1'
 alias rake='bundle exec rake'
+
+#
+# From http://grml.org/zsh/zsh-lovers.html
+#
+setopt autocd
+setopt no_hup
+setopt hist_verify
+setopt share_history
+setopt no_clobber
+
+#
+# https://wiki.archlinux.org/index.php/Zsh
+#
+bindkey -v
+autoload -U compinit
+compinit
+PROMPT='%?  '
+RPROMPT=''
+
+#
+# https://wiki.gentoo.org/wiki/Zsh/Guide
+#
+export HISTSIZE=2000
+export HISTFILE="$HOME/.history"
+export SAVEHIST=$HISTSIZE
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+
+#
+# https://github.com/zsh-users/zsh-history-substring-search
+#
+source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+ZSH_HIGHLIGHT_HIGHLIGHTERS=()

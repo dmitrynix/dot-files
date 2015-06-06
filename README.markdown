@@ -60,6 +60,16 @@ Compile and install with:
 
 See `bin/install-default-gems.sh`.
 
+# zsh
+
+* `setopt no_hup`: Don't send HUP signal to background jobs when exiting ZSH;
+* `setopt hist_verify`: Let the user edit the command line after history
+expansion (e.g. !ls) instead of immediately running it;
+* `setopt share_history`: Use the same history file for all sessions;
+* `setopt no_clobber`: Prevent > redirection from truncating the given file if
+it already exists;
+* `setopt hist_ignore_all_dups`: Preventing duplicate lines in the history
+
 # Fix
 
 ## zsh history substring search
