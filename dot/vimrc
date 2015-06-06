@@ -17,12 +17,14 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'jelera/vim-javascript-syntax'
 
-au BufNewFile,BufRead *.go set filetype=go
-au BufNewFile,BufRead *.go set noexpandtab
-
 let mapleader = ","
+" Fix error syntax
+let g:syntastic_html_tidy_ignore_errors = [ "trimming empty <i>", "trimming empty <span>" ]
+let NERDSpaceDelims = 2
 
-colorscheme github
+colorscheme atom-dark-256
+
+autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
 set number
 
@@ -82,9 +84,6 @@ map <leader>/ :set hlsearch!<cr> " Toggle hlsearch :)
 " @MarceloCajueiro
 match Error /\%80v.\+/
 
-set textwidth=80 " Use gq when in visual mode
+"set textwidth=80 " Use gq when in visual mode
 
 syntax on
-
-"
-let g:syntastic_html_tidy_ignore_errors = [ "trimming empty <i>" ]
