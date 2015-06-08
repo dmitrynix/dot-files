@@ -49,7 +49,11 @@ setopt no_clobber
 bindkey -v
 autoload -U compinit
 compinit
-PROMPT='%?  '
+if [ -n "${SSH_CONNECTION}" ]; then
+  PROMPT='%m: %?  '
+else
+  PROMPT='%?  '
+fi
 RPROMPT=''
 
 #
