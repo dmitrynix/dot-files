@@ -9,5 +9,3 @@ elif [ "${1}" == "down" ]
 then
   amixer -q set Master 2%- unmute
 fi
-
-amixer get Master | tail -1 | sed 's/.*\[\([0-9]*%\)\].*/\1/'
