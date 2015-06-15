@@ -23,6 +23,7 @@ alias q='exit'
 alias :q='exit'
 alias :q!='exit'
 alias :e='vim'
+alias cp='cp -i'
 
 alias -g CF=' | cut -d: -f1 | sort | uniq'
 alias -g L=' | less'
@@ -31,7 +32,7 @@ alias mux='tmuxinator'
 
 alias rm='echo "This is not the command you are looking for."; false'
 
-alias rspec='bundle exec rspec --no-color --fail-fast --seed 1'
+alias rspec='bundle exec rspec'
 alias rake='bundle exec rake'
 
 #
