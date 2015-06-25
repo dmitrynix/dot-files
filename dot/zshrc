@@ -104,3 +104,9 @@ function dut {
     done < <(du -kcs "$@") | sort -n -r
   fi
 }
+
+#
+# http://unix.stackexchange.com/questions/197700/zsh-case-insensitive-mid-word-completion
+#
+
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|?=** r:|?=**'
