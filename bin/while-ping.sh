@@ -7,11 +7,10 @@ else
   ip=${1}
 fi
 
+set -x
+
 while :
 do
-  echo "# ping -c 4 ${ip}"
   ping -c 10 ${ip}
-
-  echo "# sleep 5"
   sleep 5
 done
