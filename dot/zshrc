@@ -31,6 +31,7 @@ alias -g L=' | less'
 alias mux='tmuxinator'
 
 alias rm='echo "This is not the command you are looking for."; false'
+alias mv='mv -i'
 
 alias rspec='bundle exec rspec'
 alias rake='bundle exec rake'
