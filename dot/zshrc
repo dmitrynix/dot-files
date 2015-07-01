@@ -51,14 +51,14 @@ setopt no_clobber
 bindkey -v
 autoload -U compinit
 compinit
+
+PROMPT='prompt> '
+
 if [ -n "${SSH_CONNECTION}" ]; then
-  # PROMPT='%m: %?  '
-  PROMPT='%m:  '
+  RPROMPT='%B%m%b'
 else
-  # PROMPT='%?  '
-  PROMPT='.  '
+  RPROMPT=''
 fi
-RPROMPT=''
 
 #
 # https://wiki.gentoo.org/wiki/Zsh/Guide
