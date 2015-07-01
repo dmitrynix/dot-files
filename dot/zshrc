@@ -52,12 +52,10 @@ bindkey -v
 autoload -U compinit
 compinit
 
-PROMPT='prompt> '
+PROMPT='.  '
 
 if [ -n "${SSH_CONNECTION}" ]; then
   RPROMPT='%B%m%b'
-else
-  RPROMPT=''
 fi
 
 #
