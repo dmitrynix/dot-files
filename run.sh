@@ -20,7 +20,8 @@ for file in ${directory_path}/dot/*
 do
   file_basename=$(basename $file)
 
-  if [ -n "${SSH_CONNECTION}" -a ${file_basename} -e "tmux.conf" ]; then
+  if [ -n "${SSH_CONNECTION}" ] && [ ${file_basename} = "tmux.conf" ]
+  then
     echo " + ~/.${file_basename} not copied"
   else
     echo " + ~/.${file_basename}"
