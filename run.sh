@@ -20,9 +20,12 @@ for file in ${directory_path}/dot/*
 do
   file_basename=$(basename $file)
 
-  echo " + ~/.${file_basename}"
-
-  rm -fr ${HOME}/.${file_basename} && ln -s ${file} ${HOME}/.${file_basename}
+  if [ -n "${SSH_CONNECTION}" -a ${file_basename} -e "tmux.conf" ]; then
+    echo " + ~/.${file_basename} not copied"
+  else
+    echo " + ~/.${file_basename}"
+    rm -fr ${HOME}/.${file_basename} && ln -s ${file} ${HOME}/.${file_basename}
+  fi
 done
 
 rm -fr ~/.config/systemd/user
