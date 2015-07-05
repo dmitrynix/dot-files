@@ -17,6 +17,8 @@ fi
 echo " + .vim/colors"
 mkdir -p ${HOME}/.vim/colors
 cp ${directory_path}/files/github.vim ${HOME}/.vim/colors
+cp ${directory_path}/files/atom-dark-256.vim ${HOME}/.vim/colors
+cp ${directory_path}/files/atom-dark.vim ${HOME}/.vim/colors
 
 echo " + vim bundle"
 vim +BundleInstall +qall
