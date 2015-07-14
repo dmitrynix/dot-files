@@ -48,7 +48,6 @@ setopt no_clobber
 #
 # https://wiki.archlinux.org/index.php/Zsh
 #
-bindkey -v
 autoload -U compinit
 compinit
 
@@ -72,8 +71,9 @@ setopt hist_ignore_space
 #
 source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh-history-substring-search/zsh-history-substring-search.zsh
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
+# bind P and N for EMACS mode
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
 ZSH_HIGHLIGHT_HIGHLIGHTERS=()
 
 #

@@ -18,11 +18,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'jelera/vim-javascript-syntax'
 
 let mapleader = ","
-" Fix error syntax
-let g:syntastic_html_tidy_ignore_errors = [ "trimming empty <i>", "trimming empty <span>" ]
-let NERDSpaceDelims = 2
 
-colorscheme atom-dark-256
+let NERDSpaceDelims = 2
 
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
@@ -87,3 +84,13 @@ match Error /\%80v.\+/
 "set textwidth=80 " Use gq when in visual mode
 
 syntax on
+
+" From:
+" http://vimcasts.org/episodes/working-with-windows/
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+map <C-n> :tabnext<cr>
+map <C-p> :tabprevious<cr>
