@@ -1,22 +1,8 @@
 xsetroot -name " "
 
-case $(hostname) in
-desktop1)
-  setxkbmap -layout us -variant mac -option altwin:swap_lalt
-  ;;
-ultra0)
-  setxkbmap -layout us -variant mac -option altwin:swap_alt_win
-  xmodmap ~/.remap
+setxkbmap -layout us -variant mac -option altwin:swap_lalt
 
-# while true
-# do
-#   VOL=$(amixer get Master | tail -1 | sed 's/.*\[\([0-9]*%\)\].*/\1/')
-#   xsetroot -name "$(acpi -b) [${VOL}]"
-
-#   sleep 1m
-# done &
-  ;;
-esac
+xmodmap ~/.remap
 
 xsetroot -cursor_name left_ptr
 

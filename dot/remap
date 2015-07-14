@@ -1,0 +1,11 @@
+! Swap caps lock and escape
+! From:
+! http://vim.wikia.com/wiki/Map_caps_lock_to_escape_in_XWindows
+remove Lock = Caps_Lock
+keysym Escape = Caps_Lock
+keysym Caps_Lock = Escape
+add Lock = Caps_Lock
+
+! From:
+! http://askubuntu.com/questions/73502/how-to-map-the-menu-key-as-altgr-key
+keysym Menu = ISO_Level3_Shift
