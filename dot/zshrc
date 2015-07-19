@@ -1,5 +1,7 @@
+[[ -e ~/.zprofile ]] && source ~/.zprofile
+
 unsetopt correct
-export PATH=${PATH}:~/.node_modules/bin
+
 #
 # Load machine only configuration
 #
