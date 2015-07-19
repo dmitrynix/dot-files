@@ -107,6 +107,26 @@ function dut {
 }
 
 #
+# Auto start tmux.
+#
+# Source: https://github.com/sorin-ionescu/prezto/blob/master/modules/tmux/init.zsh
+#
+if [[ -z "$SSH_CONNECTION" && -z "$TMUX" && -z "$VIM" ]]; then
+  tmux start-server
+
+  # Create a 'prezto' session if no session has been defined in tmux.conf.
+  if ! tmux has-session 2> /dev/null; then
+    tmux_session='prezto'
+    tmux \
+      new-session -d -s "$tmux_session" \; \
+      set-option -t "$tmux_session" destroy-unattached off &> /dev/null
+  fi
+
+  # Attach to the 'prezto' session or to the last session used.
+  exec tmux attach-session
+fi
+
+#
 # http://unix.stackexchange.com/questions/197700/zsh-case-insensitive-mid-word-completion
 #
 
