@@ -83,14 +83,18 @@ match Error /\%80v.\+/
 
 "set textwidth=80 " Use gq when in visual mode
 
+colorscheme desert
 syntax on
 
 " From:
 " http://vimcasts.org/episodes/working-with-windows/
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+map <leader>h <C-w>h
+map <leader>j <C-w>j
+map <leader>k <C-w>k
+map <leader>l <C-w>l
 
-map <C-n> :tabnext<cr>
-map <C-p> :tabprevious<cr>
+map <leader>n :tabnext<cr>
+map <leader>p :tabprevious<cr>
+
+" From: http://ryanselk.com/2015/05/19/terminals-in-neovim/
+tnoremap <C-q> <C-\><C-n>
