@@ -75,6 +75,7 @@ setopt hist_ignore_space
 source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh-history-substring-search/zsh-history-substring-search.zsh
 # bind P and N for EMACS mode
+bindkey -e
 bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
 ZSH_HIGHLIGHT_HIGHLIGHTERS=()
