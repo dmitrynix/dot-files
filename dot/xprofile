@@ -1,9 +1,11 @@
+[[ -e ~/.zprofile ]] && source ~/.zprofile
+
+setxkbmap -layout us -variant mac \
+  -option \
+  -option altwin:swap_lalt \
+  -option ctrl:nocaps
+
 xsetroot -name " "
-
-setxkbmap -layout us -variant mac -option altwin:swap_lalt
-
-xmodmap ~/.remap
-
 xsetroot -cursor_name left_ptr
 
 feh --bg-scale ~/Downloads/GERMAN_Flag_deutschland_feuer_by_suicidecrew.jpg
@@ -13,15 +15,5 @@ feh --bg-scale ~/Downloads/GERMAN_Flag_deutschland_feuer_by_suicidecrew.jpg
 # https://wiki.archlinux.org/index.php/dwm#Fixing_misbehaving_Java_applications
 wmname LG3D
 export _JAVA_AWT_WM_NONREPARENTING=1
-
-if [[ ! -d "$TMPDIR" ]]; then
-  export TMPDIR="/tmp/$USER"
-  mkdir -p -m 700 "$TMPDIR"
-fi
-
-TMPPREFIX="${TMPDIR%/}/zsh"
-if [[ ! -d "$TMPPREFIX" ]]; then
-  mkdir -p "$TMPPREFIX"
-fi
 
 /usr/bin/slock
