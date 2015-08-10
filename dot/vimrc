@@ -5,8 +5,7 @@ set encoding=utf8 " Use utf-8 as default encoding
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" My plugins to install/update with vundler
-" See http://vimawesome.com/
+" My plugins to install/update with vundler See http://vimawesome.com/
 Plugin 'gmarik/snipmate.vim'
 Plugin 'gmarik/vundle'
 Plugin 'jamessan/vim-gnupg'
@@ -98,3 +97,5 @@ map <leader>p :tabprevious<cr>
 
 " From: http://ryanselk.com/2015/05/19/terminals-in-neovim/
 tnoremap <C-q> <C-\><C-n>
+
+SyntasticToggleMode
