@@ -10,7 +10,6 @@ Plugin 'gmarik/snipmate.vim'
 Plugin 'gmarik/vundle'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
@@ -97,5 +96,3 @@ map <leader>p :tabprevious<cr>
 
 " From: http://ryanselk.com/2015/05/19/terminals-in-neovim/
 tnoremap <C-q> <C-\><C-n>
-
-SyntasticToggleMode
