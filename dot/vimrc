@@ -8,18 +8,13 @@ call vundle#rc()
 " My plugins to install/update with vundler See http://vimawesome.com/
 Plugin 'gmarik/snipmate.vim'
 Plugin 'gmarik/vundle'
-Plugin 'jamessan/vim-gnupg'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-surround'
-Plugin 'jelera/vim-javascript-syntax'
+Plugin 'kshenoy/vim-signature'
 
 let mapleader = ","
 
 let NERDSpaceDelims = 2
-
-autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
 set number
 
@@ -27,7 +22,6 @@ set wrap " Line wrapping on
 set ts=2 sts=2 sw=2 expandtab " Use spaces instead tabs. From: http://vimcasts.org/episodes/tabs-and-spaces/
 
 " Disable defaults
-set mouse-=a " Disable mouse integration :|, from: http://www.varesano.net/blog/fabio/disable%20vim%20automatic%20visual%20mode%20using%20mouse
 set noswapfile " Dont create *.swp* files. Useful to use with dropbox.
 set nobackup " Dont create ~ files.
 set nocursorline " Dont underline all line.
@@ -44,27 +38,6 @@ set listchars=tab:\|\ ,trail:·,eol:¬
 " `:help statusline`
 set laststatus=2 " Always show statusline
 set statusline=%<%f\ \[%{&ff}\]\ %y\ %h%m%r%=%-14.(%c%V%)\ %l/%L[%P]
-
-" From: http://vim.wikia.com/wiki/Restore_cursor_to_file_position_in_previous_editing_session
-" Tell vim to remember certain things when we exit
-"  '10  :  marks will be remembered for up to 10 previously edited files
-"  "100 :  will save up to 100 lines for each register
-"  :20  :  up to 20 lines of command-line history will be remembered
-"  %    :  saves and restores the buffer list
-"  n... :  where to save the viminfo files
-set viminfo='10,\"100,:20,%,n~/.viminfo
-
-function! ResCur()
-  if line("'\"") <= line("$")
-    normal! g`"
-    return 1
-  endif
-endfunction
-
-augroup resCur
-  autocmd!
-  autocmd BufWinEnter * call ResCur()
-augroup END
 
 " Disable arrow keys
 " http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/
@@ -83,16 +56,6 @@ match Error /\%80v.\+/
 
 colorscheme desert
 syntax on
-
-" From:
-" http://vimcasts.org/episodes/working-with-windows/
-map <leader>h <C-w>h
-map <leader>j <C-w>j
-map <leader>k <C-w>k
-map <leader>l <C-w>l
-
-map <leader>n :tabnext<cr>
-map <leader>p :tabprevious<cr>
 
 " From: http://ryanselk.com/2015/05/19/terminals-in-neovim/
 tnoremap <C-q> <C-\><C-n>
