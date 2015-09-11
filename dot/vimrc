@@ -12,6 +12,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-rails'
 Plugin 'kshenoy/vim-signature'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'tpope/vim-surround'
+Plugin 'kien/rainbow_parentheses.vim'
 
 let mapleader = ","
 
@@ -60,3 +62,10 @@ syntax on
 
 " From: http://ryanselk.com/2015/05/19/terminals-in-neovim/
 tnoremap <C-q> <C-\><C-n>
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
