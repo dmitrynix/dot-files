@@ -49,8 +49,6 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-map <leader>/ :set hlsearch!<cr> " Toggle hlsearch :)
-
 " pay attention when the line has more then 80 characters. Tip by
 " @MarceloCajueiro
 match Error /\%80v.\+/
