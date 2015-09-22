@@ -69,7 +69,7 @@ static const char *slock[]        = { "slock", NULL };
 
 static const char *calccmd[]      = { "dmenu_calc", NULL };
 static const char *browser[]      = { "google-chrome-stable", NULL };
-static const char *filemanager[]  = { "dolphin", NULL };
+static const char *filemanager[]  = { "dolphin4", NULL };
 static const char *screenshot[]   = { "ksnapshot", NULL };
 
 /* Volumes: */
