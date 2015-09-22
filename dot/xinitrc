@@ -1,24 +1,2 @@
-[ -f /etc/xprofile ] && source /etc/xprofile
-[ -f ~/.xprofile ] && source ~/.xprofile
-
-# From: https://github.com/ArchFwin/dotfiles/blob/master/scripts/dwm.sh
-if [[ -d /etc/xdg/autostart ]]; then
-  for y in /etc/xdg/autostart/*; do
-    x=$(cat $y)
-    case "$x" in
-    *OnlyShowIn*)
-      # There ain't no-one in the 'verse putting "OnlyShowIn=dwm" in a .desktop
-      # file
-      # Similarly, ain't no-one putting "NotShowIn=dwm" in a .desktop file.
-      # Hence, both cases are ignored
-      ;;
-    *)
-      $(echo "$x" | grep -m 1 "Exec=" | sed 's/Exec=//g')
-      ;;
-    esac
-  done
-  unset y
-  unset x
-fi
-
+[[ -e ~/.xprofile ]] && source ~/.xprofile
 exec /usr/bin/dbus-launch /home/dmitry/local/bin/dwm

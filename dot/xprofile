@@ -10,10 +10,4 @@ xsetroot -cursor_name left_ptr
 
 feh --bg-scale ~/Downloads/GERMAN_Flag_deutschland_feuer_by_suicidecrew.jpg
 
-# Fix java apps
-# From:
-# https://wiki.archlinux.org/index.php/dwm#Fixing_misbehaving_Java_applications
-wmname LG3D
-export _JAVA_AWT_WM_NONREPARENTING=1
-
 /usr/bin/slock
