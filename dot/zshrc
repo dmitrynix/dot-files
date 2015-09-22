@@ -25,7 +25,7 @@ alias quit='exit'
 alias q='exit'
 alias :q='exit'
 alias :q!='exit'
-alias :e='vim'
+alias :e=${EDITOR}
 alias cp='cp -i'
 
 alias -g CF=' | cut -d: -f1 | sort | uniq'
