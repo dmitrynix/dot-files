@@ -1,2 +1,2 @@
 [[ -e ~/.xprofile ]] && source ~/.xprofile
-exec /usr/bin/dbus-launch /home/dmitry/local/bin/dwm
+exec /usr/bin/dbus-launch /usr/bin/i3
