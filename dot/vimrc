@@ -27,6 +27,7 @@ set ts=2 sts=2 sw=2 expandtab " Use spaces instead tabs. From: http://vimcasts.o
 " Disable defaults
 set noswapfile " Dont create *.swp* files. Useful to use with dropbox.
 set nobackup " Dont create ~ files.
+set nowritebackup
 set nocursorline " Dont underline all line.
 setlocal incsearch " Set search *dinamic*
 set hlsearch " No highlight searchs
