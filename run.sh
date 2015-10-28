@@ -28,3 +28,12 @@ do
     rm -fr ${HOME}/.${file_basename} && ln -s ${file} ${HOME}/.${file_basename}
   fi
 done
+
+
+# Tip from: https://github.com/neovim/neovim/blob/42047acb4f07c689936b051864c6b4448b1b6aa1/runtime/doc/nvim_from_vim.txt#L12-L18
+set -xe
+nvim_config=${XDG_CONFIG_HOME:=$HOME/.config}/nvim
+\rm -rf ${nvim_config}/init.vim
+\rm -rf ${nvim_config}
+ln -s ~/.vim ${nvim_config}
+ln -s ${directory_path}/dot/vimrc ${nvim_config}/init.vim
