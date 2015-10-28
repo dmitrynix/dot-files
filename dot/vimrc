@@ -70,3 +70,5 @@ au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
 
 nmap <Tab> gt
 nmap <S-Tab> gT
+
+set mouse-=a
