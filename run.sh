@@ -5,6 +5,10 @@ set -e
 script_path=$(readlink -f "$0")
 directory_path=$(dirname "${script_path}")
 
+cd $directory_path
+git submodule init
+git submodule update
+
 if [ ! -x "$(which git)" ]; then
   echo "ERROR: git not installed"
   exit 1
