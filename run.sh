@@ -23,8 +23,10 @@ do
   fi
 done
 
-mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
-ln -s ${directory_path}/nvim ${XDG_CONFIG_HOME:=$HOME/.config}/nvim
+config_dir=${XDG_CONFIG_HOME:=$HOME/.config}
+mkdir -p ${config_dir}
+\rm -fr ${config_dir}/nvim
+ln -s ${directory_path}/nvim ${config_dir}/nvim
 echo " + vim bundle"
 nvim +BundleInstall +qall
 nvim +BundleUpdate +qall
