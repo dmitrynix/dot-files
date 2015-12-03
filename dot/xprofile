@@ -8,6 +8,7 @@ setxkbmap -layout us -variant mac \
 xsetroot -name " "
 xsetroot -cursor_name left_ptr
 
-feh --bg-scale ~/Downloads/GERMAN_Flag_deutschland_feuer_by_suicidecrew.jpg
+#feh --bg-scale ~/Downloads/GERMAN_Flag_deutschland_feuer_by_suicidecrew.jpg
+feh --bg-scale ~/Dropbox/Pictures/wallpapers/Canada-Maple-Leaf-Symbol-Picture5.jpg
 
 /usr/bin/slock
