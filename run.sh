@@ -10,12 +10,6 @@ if [ ! -x "$(which git)" ]; then
   exit 1
 fi
 
-for script in ${directory_path}/scripts/*
-do
-  echo " + $(basename $script)"
-  source $script
-done
-
 for file in ${directory_path}/dot/*
 do
   file_basename=$(basename $file)
@@ -29,11 +23,18 @@ do
   fi
 done
 
+mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
+ln -s ${directory_path}/nvim ${XDG_CONFIG_HOME:=$HOME/.config}/nvim
+echo " + vim bundle"
+nvim +BundleInstall +qall
+nvim +BundleUpdate +qall
 
-# Tip from: https://github.com/neovim/neovim/blob/42047acb4f07c689936b051864c6b4448b1b6aa1/runtime/doc/nvim_from_vim.txt#L12-L18
-set -xe
-nvim_config=${XDG_CONFIG_HOME:=$HOME/.config}/nvim
-\rm -rf ${nvim_config}/init.vim
-\rm -rf ${nvim_config}
-ln -s ~/.vim ${nvim_config}
-ln -s ${directory_path}/dot/vimrc ${nvim_config}/init.vim
+echo " + zsh"
+for plugin in zsh-syntax-highlighting zsh-history-substring-search
+do
+  if [ -d "${HOME}/.${plugin}" ]; then
+    cd ~/.${plugin} && git pull origin master
+  else
+    git clone https://github.com/zsh-users/${plugin}.git ~/.${plugin}
+  fi
+done

@@ -2,16 +2,14 @@ filetype plugin indent on
 set encoding=utf8 " Use utf-8 as default encoding
 
 " Vundler
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#rc()
 
 " My plugins to install/update with vundler See http://vimawesome.com/
 Plugin 'gmarik/snipmate.vim'
-Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-rails'
 Plugin 'kshenoy/vim-signature'
-Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-surround'
 Plugin 'kien/rainbow_parentheses.vim'
 
