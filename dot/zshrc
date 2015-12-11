@@ -55,9 +55,9 @@ autoload -U compinit
 compinit
 
 if [ -n "${SSH_CONNECTION}" ]; then
-  PROMPT='%B%m%b .  '
+  PROMPT='%B%m%b %#  '
 else
-  PROMPT='.  '
+  PROMPT='%#  '
 fi
 
 #
