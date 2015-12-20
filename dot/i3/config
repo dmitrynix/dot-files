@@ -23,8 +23,8 @@ font pango:DejaVu Sans Mono 12
 floating_modifier $mod
 
 # start apps
-bindsym $mod+Shift+Delete exec st -e bash -c "ssh vm"
-bindsym $mod+Shift+Return exec st
+bindsym $mod+Shift+Delete exec terminator -e 'bash -c "ssh vm"'
+bindsym $mod+Shift+Return exec terminator
 bindsym $mod+w exec google-chrome-stable
 bindsym $mod+a exec dolphin4
 bindsym Pause exec slock
