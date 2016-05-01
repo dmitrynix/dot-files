@@ -27,6 +27,7 @@ bindsym $mod+Shift+Delete exec terminator -e 'bash'
 bindsym $mod+Shift+Return exec terminator
 bindsym $mod+w exec google-chrome-stable
 bindsym $mod+a exec emelfm2
+bindsym $mod+Shift+e exec ~/.dot-files/bin/screenshot-with-imagemagick.sh
 bindsym Pause exec slock
 
 # Multimedia keys
