@@ -13,35 +13,7 @@ Add to shell:
 
 From: [http://blog.sanctum.geek.nz/compiling-in-home/](http://blog.sanctum.geek.nz/compiling-in-home/)
 
-# Start PostgreSQL
-
-    % initdb -D ~/local/var/lib/postgres/data
-
-# DWM
-
-Change between screens:
-
-* 'alt+shirt+,'
-* 'alt+shirt+.'
-
 ## Compile and install
-
-    % make && make PREFIX=~/local install
-
-## desktop file
-
-    % cat /usr/share/xsessions/dwm.desktop
-    [Desktop Entry]
-    Encoding=UTF-8
-    Name=Dwm
-    Comment=Dynamic window manager
-    Exec=/home/dmitry/local/bin/dwm
-    Icon=dwm
-    Type=XSession
-
-# St terminal
-
-Compile and install with:
 
     % make && make PREFIX=~/local install
 
@@ -85,7 +57,7 @@ Use:
     git submodule update --init --recursive
     git submodule foreach git pull origin master
 
-From: https://github.com/sorin-ionescu/prezto/issues/488
+From: [https://github.com/sorin-ionescu/prezto/issues/488](https://github.com/sorin-ionescu/prezto/issues/488).
 
 ## PostgreSQL and Ruby On Rails
 
@@ -97,4 +69,8 @@ Install with `pg_config` path:
 
     gem install pg -- --with-pg-config=/home/dmitry/.linuxbrew/bin/pg_config
 
-From: http://stackoverflow.com/questions/8465508/can-not-connect-to-local-postgresql/24837298#24837298
+From: [http://stackoverflow.com/questions/8465508/can-not-connect-to-local-postgresql/24837298#24837298](http://stackoverflow.com/questions/8465508/can-not-connect-to-local-postgresql/24837298#24837298).
+
+## Ruby 2.1.5 installation
+
+See: [https://gist.github.com/mislav/055441129184a1512bb5.txt](https://gist.github.com/mislav/055441129184a1512bb5.txt).
