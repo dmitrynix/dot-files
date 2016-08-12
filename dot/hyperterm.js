@@ -1,10 +1,11 @@
 module.exports = {
   config: {
     // default font size in pixels for all tabs
-    fontSize: 18,
+    fontSize: 20,
 
     // font family with optional fallbacks
     fontFamily: 'Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
+    //fontFamily: 'Droid Sans Mono, monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.75)',
