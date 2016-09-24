@@ -1,2 +1,7 @@
+[[ -e ~/.zprofile ]] && source ~/.zprofile
 [[ -e ~/.xprofile ]] && source ~/.xprofile
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+
+/usr/bin/i3lock
+
 exec /usr/bin/dbus-launch /usr/bin/i3
