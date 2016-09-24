@@ -12,11 +12,11 @@ Plugin 'tpope/vim-rails'
 Plugin 'kshenoy/vim-signature'
 Plugin 'tpope/vim-surround'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'editorconfig/editorconfig-vim'
 
 let mapleader = ","
 
 let NERDSpaceDelims = 2
-
 set number
 
 set wrap " Line wrapping on
