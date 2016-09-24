@@ -1,7 +1,14 @@
+# start some nice programs
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
+fi
+
 [[ -e ~/.zprofile ]] && source ~/.zprofile
 [[ -e ~/.xprofile ]] && source ~/.xprofile
-[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
-/usr/bin/i3lock
+xhost local:root
 
 exec /usr/bin/dbus-launch /usr/bin/i3
