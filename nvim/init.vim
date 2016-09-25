@@ -71,3 +71,5 @@ nmap <Tab> gt
 nmap <S-Tab> gT
 
 set mouse-=a
+
+set foldmethod=manual
