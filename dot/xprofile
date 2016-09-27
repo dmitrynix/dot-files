@@ -5,7 +5,6 @@ setxkbmap -layout us -variant mac \
   -option altwin:swap_lalt \
   -option ctrl:nocaps
 
-xsetroot -name " "
 xsetroot -cursor_name left_ptr
 
 feh --bg-scale ~/Pictures/wallpapper.jpg
