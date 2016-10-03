@@ -12,6 +12,7 @@
 export EDITOR=$(which nvim)
 export VISUAL=$(which nvim)
 export PAGE=$(which less)
+export TERMINAL=$(which xterm)
 
 #
 # Language
