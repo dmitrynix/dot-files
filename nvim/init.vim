@@ -13,6 +13,7 @@ Plugin 'kshenoy/vim-signature'
 Plugin 'tpope/vim-surround'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'elixir-lang/vim-elixir'
 
 let mapleader = ","
 
