@@ -36,11 +36,13 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  ~/local/{bin,sbin}
-  ~/.node_modules/bin
   /usr/local/{bin,sbin}
+  ~/local/{bin,sbin}
+  ~/.dot-files/bin
   $path
 )
+
+[[ -d ~/Dropbox/Binary ]] && path=(~/Dropbox/Binary $path)
 
 #
 # Less
@@ -70,3 +72,10 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
+
+#
+# Compiling in userspace
+#
+
+export CFLAGS="-I${HOME}/local/include"
+export LDFLAGS="-L${HOME}/local/lib"
