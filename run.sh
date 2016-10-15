@@ -34,7 +34,7 @@ mkdir -p ${config_dir}
 ln -s ${directory_path}/nvim ${config_dir}/nvim
 echo " + vim bundle"
 
-if [ ! -x "$(which git)" ]
+if [ -x "$(which git)" ]
 then
   nvim +BundleInstall +qall
   nvim +BundleUpdate +qall
