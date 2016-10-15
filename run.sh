@@ -6,13 +6,14 @@ script_path=$(readlink -f "$0")
 directory_path=$(dirname "${script_path}")
 
 cd $directory_path
-git submodule init
-git submodule update
 
 if [ ! -x "$(which git)" ]; then
   echo "ERROR: git not installed"
   exit 1
 fi
+
+git submodule init
+git submodule update
 
 for file in ${directory_path}/dot/*
 do
@@ -32,8 +33,12 @@ mkdir -p ${config_dir}
 \rm -fr ${config_dir}/nvim
 ln -s ${directory_path}/nvim ${config_dir}/nvim
 echo " + vim bundle"
-nvim +BundleInstall +qall
-nvim +BundleUpdate +qall
+
+if [ ! -x "$(which git)" ]
+then
+  nvim +BundleInstall +qall
+  nvim +BundleUpdate +qall
+fi
 
 echo " + zsh"
 for plugin in zsh-syntax-highlighting zsh-history-substring-search
