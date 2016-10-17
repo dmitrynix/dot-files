@@ -7,4 +7,4 @@ setxkbmap -layout us -variant mac \
 
 xsetroot -cursor_name left_ptr
 
-feh --bg-scale ~/Pictures/wallpapper.jpg
+[[ -f ~/Dropbox/Pictures/wallpaper.jpg ]] && feh --bg-scale ~/Dropbox/Pictures/wallpaper.jpg
