@@ -24,6 +24,8 @@ set wrap " Line wrapping on
 set ts=2 sts=2 sw=2 expandtab " Use spaces instead tabs. From: http://vimcasts.org/episodes/tabs-and-spaces/
 
 autocmd FileType go setlocal shiftwidth=2 tabstop=2 noexpandtab
+autocmd BufNewFile,BufRead *.eex :set filetype=eelixir
+autocmd BufNewFile,BufRead *.md,*.markdown :set filetype=markdown
 
 " Disable defaults
 set noswapfile " Dont create *.swp* files. Useful to use with dropbox.
