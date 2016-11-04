@@ -11,6 +11,7 @@ xterm*termName: xterm-color
 xterm*eightBitInput: false
 xterm*cursorBlink: false
 XTerm*ScrollBar: false
+XTerm*selectToClipboard: true
 
 ! Base16 Default Dark
 ! Scheme: Chris Kempson (http://chriskempson.com)
