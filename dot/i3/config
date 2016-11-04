@@ -25,7 +25,7 @@ floating_modifier $mod
 # start apps
 bindsym $mod+Shift+Return exec i3-sensible-terminal
 bindsym $mod+w exec google-chrome-stable
-bindsym $mod+a exec emelfm2
+bindsym $mod+a exec xfe
 bindsym $mod+Shift+e exec ~/.dot-files/bin/screenshot-with-imagemagick.sh
 bindsym Pause exec i3lock -u -c 000000
 
