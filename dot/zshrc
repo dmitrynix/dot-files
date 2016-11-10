@@ -10,15 +10,6 @@ if [[ -f "$HOME/local/etc/profile" ]]; then
 fi
 
 #
-# chruby
-#
-if [[ -d "/usr/share/chruby" ]]; then
-  source "/usr/share/chruby/chruby.sh"
-  source "/usr/share/chruby/auto.sh"
-  chruby 2
-fi
-
-#
 # Aliases
 #
 alias quit='exit'
