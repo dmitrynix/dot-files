@@ -29,13 +29,37 @@ bindsym $mod+a exec xfe
 bindsym $mod+Shift+e exec ~/.dot-files/bin/screenshot-with-imagemagick.sh
 bindsym Pause exec i3lock-fancy
 
-# Multimedia keys
-bindsym XF86AudioNext exec mpc next
-bindsym XF86AudioPrev exec mpc prev
-bindsym XF86AudioPlay exec mpc toggle
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+# Multimedia keys - mpc
+# set $nextMusic   mpc next
+# set $prevMusic   mpc prev
+# set $toggleMusic mpc toggle
+
+# Multimedia keys - playerctl
+set $nextMusic   playerctl next
+set $prevMusic   playerctl next
+set $toggleMusic playerctl play-pause
+
+set $raiseVolume amixer -q set Master 2dB+ unmute
+set $lowerVolume amixer -q set Master 2dB- unmute
+set $toggleAudio amixer -q set Master toggle
+
+bindsym XF86AudioNext exec $nextMusic
+bindsym F9            exec $nextMusic
+
+bindsym XF86AudioPrev exec $prevMusic
+bindsym F7            exec $prevMusic
+
+bindsym XF86AudioPlay exec $toggleMusic
+bindsym F8            exec $toggleMusic
+
+bindsym XF86AudioRaiseVolume exec $raiseVolume
+bindsym F12                  exec $raiseVolume
+
+bindsym XF86AudioLowerVolume exec $lowerVolume
+bindsym F11                  exec $lowerVolume
+
 bindsym XF86AudioMute exec amixer -q set Master toggle
+bindsym F10           exec amixer -q set Master toggle
 
 # kill focused window
 bindsym $mod+q kill
