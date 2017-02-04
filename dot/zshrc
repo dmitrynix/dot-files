@@ -22,14 +22,10 @@ alias cp='cp -i'
 alias -g CF=' | cut -d: -f1 | sort | uniq'
 alias -g L=' | less'
 
-alias mux='tmuxinator'
 alias doc='docker-compose'
 
 alias rm='echo "This is not the command you are looking for."; false'
 alias mv='mv -i'
-
-alias rspec='bundle exec rspec'
-alias rake='bundle exec rake'
 
 #
 # From http://grml.org/zsh/zsh-lovers.html
